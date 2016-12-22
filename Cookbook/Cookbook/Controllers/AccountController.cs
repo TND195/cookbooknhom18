@@ -28,7 +28,7 @@ namespace Cookbook.Controllers
         public ActionResult FacebookLogin(string token)
         {
             WebClient client = new WebClient();
-            string JsonResult = client.DownloadString(string.Concat("https://graph.facebook.com/me?access_token=", token));
+            string JsonResult = client.DownloadString(string.Concat("https://graph.facebook.com/me?access_token=", token, "&fields=first_name,last_name"));
             JObject jsonUserInfo = JObject.Parse(JsonResult);
 
             Session["Ten"] = jsonUserInfo.Value<string>("first_name");
@@ -53,7 +53,7 @@ namespace Cookbook.Controllers
             {
                 Session["IsNewUser"] = Boolean.TrueString;
 
-                Account account = new Account("dex3tjeiy", "311646566683495", "znIKiaeshAim4evjBHBqda7CX1U");
+                Account account = new Account("tnd", "292566576251545", "xtDJO3Z-xwE69Dwf-XiduvrInTQ");
                 Cloudinary cloudinary = new Cloudinary(account);
 
                 var uploadParams = new ImageUploadParams()
