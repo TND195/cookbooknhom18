@@ -58,7 +58,7 @@ namespace Cookbook.Controllers
         {
 
             //Upload hinh
-            Account account = new Account("dex3tjeiy", "311646566683495", "znIKiaeshAim4evjBHBqda7CX1U");
+            Account account = new Account("tnd", "292566576251545", "xtDJO3Z-xwE69Dwf-XiduvrInTQ");
             Cloudinary cloudinary = new Cloudinary(account);
 
             var uploadParams = new ImageUploadParams()
@@ -78,7 +78,7 @@ namespace Cookbook.Controllers
         {
 
             //Upload hinh
-            Account account = new Account("dex3tjeiy", "311646566683495", "znIKiaeshAim4evjBHBqda7CX1U");
+            Account account = new Account("tnd", "292566576251545", "xtDJO3Z-xwE69Dwf-XiduvrInTQ");
             Cloudinary cloudinary = new Cloudinary(account);
 
             var uploadParams = new ImageUploadParams()
